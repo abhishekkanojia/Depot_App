@@ -67,6 +67,19 @@ end
   	end
   end
 
+  test "title length atleast five" do 
+  		product = Product.new(title: products(:two).title,
+  						   description: "yyy",
+  						   price: 1,
+  						   image_url: "fred.gif"	
+  							)
+  		assert product.invalid?
+  		assert product.errors[:title].any?
+  		assert_equal ["Too short !! atleast 5 characters","has already been taken"],product.errors[:title]
+  		#assert_equal "MyS", products(:two).title
+  end
+
+
   test "unique title" do
   	product = Product.new(title: products(:ruby).title,
   						   description: "yyy",
@@ -77,5 +90,7 @@ end
   	assert product.invalid?
   	assert_equal ["has already been taken"],product.errors[:title]
   end
+
+
 
 end

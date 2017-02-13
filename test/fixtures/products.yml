@@ -1,4 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+two:
+  title:       MyS
+  description: MyText
+  price: 9.99
+  image_url: MyString.png
 
 ruby:
   title: Programming Ruby 1.9
@@ -8,3 +13,4 @@ ruby:
                delivered fast, you should add Ruby to your toolbox.
   price:        49.50
   image_url: ruby.png
+
