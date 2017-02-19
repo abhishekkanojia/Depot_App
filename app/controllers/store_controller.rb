@@ -1,4 +1,6 @@
 class StoreController < ApplicationController
+  include CurrentCart
+  before_action :set_cart
   def index
   	time = Time.new
   	@time = time.strftime("%H:%M:%S %p")
