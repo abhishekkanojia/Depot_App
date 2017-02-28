@@ -1,0 +1,39 @@
+<% if notice %>
+	<span><%= notice %></span>
+<% end %>
+<h1>Welcome <%= session[:user_name].to_s.capitalize %></h1>
+<%= link_to "Logout",logout_path,class: "pull-right link",method: :delete %>
+
+<span>Date:<%= @time.strftime("%d/%m/%Y") %></span><br/>
+<span>Time:<%= @time.strftime("%I:%M%p") %></span>
+
+<span class="pull-right">We have <span class="label label-primary"><%= pluralize(@total_orders, "order") %>.</span></span>
+
+<h2>Following are orders: </h2>
+<hr/>
+<table class="table table-striped table-responsive">
+	<tr>
+		<th>Name</th>
+		<th>Address</th>
+		<th>Email</th>
+		<th>Pay Type</th>
+		<th>Delete</th>
+	</tr>
+<% @order.each do |order|  %>
+	<tr>
+		<td>
+			<%= order.name %>
+		</td>
+		<td>
+			<%= order.address %>
+		</td>
+		<td>
+			<%= order.email %>
+		</td>
+		<td>
+			<%= order.pay_type %>
+		</td>
+		
+	</tr>
+	<% end %>
+</table>

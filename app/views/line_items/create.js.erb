@@ -1,0 +1,9 @@
+if ( $("#cart tr").length == 1 ){
+	$("#cart").show('bind',1000);
+}
+
+$("#notice").hide();
+
+$("#cart").html("<%= escape_javascript render(@cart) %>");
+
+$("#current_item").css({'background-color':'#99cc99'}).animate({'background-color':'#114411'},1000);
