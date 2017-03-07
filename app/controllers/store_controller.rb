@@ -3,6 +3,13 @@ class StoreController < ApplicationController
   include CurrentCart
   before_action :set_cart
   def index
+    # switching locale
+    if params[:set_locale]
+      redirect_to store_url(locale: params[:set_locale])
+    else
+      @products = Product.order(:title)
+    end
+
   	time = Time.new
   	@time = time.strftime("%H:%M:%S %p")
   	@product = Product.order(:title)
