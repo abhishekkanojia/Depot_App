@@ -48,7 +48,3 @@ gem 'bcrypt-ruby', '3.1.2'
 # Use debugger
  gem 'byebug', group: [:development, :test]
 
-# production database
-group :production do 
-	gem "mysql2", "~>0.3.18"
-end
