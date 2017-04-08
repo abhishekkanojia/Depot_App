@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '~> 4.0.0'
 
 # Use sqlite3 as the database for Active Record
-
+gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -48,14 +48,7 @@ gem 'bcrypt-ruby', '3.1.2'
 # Use debugger
  gem 'byebug', group: [:development, :test]
 
-
-group :development, :test do 
-	gem "mysql2", "~>0.3.18"
-	gem 'sqlite3'
-end
-
 # production database
-group :production do 
-	gem "pg"
-	gem "rails_12factor"
-end
+# group :production do 
+# 	gem "mysql2", "~>0.3.18"
+# end
