@@ -50,7 +50,7 @@ gem 'bcrypt-ruby', '3.1.2'
 
 
 # production database
-# group :production do 
-# 	gem "mysql2", "~>0.3.18"
-# end
+group :production do 
+	gem "mysql2", "~>0.3.18"
+end
 
