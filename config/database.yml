@@ -19,12 +19,12 @@ test:
   timeout: 5000
 
 production:
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
   reconnect: false
   database: depot_production
   pool: 5
-  username: root
-  password: admin@2013
+  username: 
+  password: 
   host: localhost
   timeout: 5000

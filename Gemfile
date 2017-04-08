@@ -51,6 +51,7 @@ gem 'bcrypt-ruby', '3.1.2'
 
 # production database
 group :production do 
-	gem "mysql2", "~>0.3.18"
+	gem "pg", "~>0.17.1"
+	gem "rails_12factor", "0.0.2"
 end
 
